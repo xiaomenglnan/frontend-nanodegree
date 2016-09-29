@@ -1,0 +1,18 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. Answer the following questions:
+  * What new skills have you learned?
+  * What has been easy?
+  * What has been difficult?
+  * How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+---
+
+Your response goes here!
+
+1.I've learned a lot of new tags:like unordered list <ul> and <li>;hyperlink <a>;<figure> with <figcaption> to perform images;
+<strong> tag to render text in bold;<img> tag to perform images;<em> tag to emphasis text in italic;&nbsp to perform space;
+<strike> tag to perform text with a line through it;<sup> tag to display superscript;<hr> without closing tag to perform horizontal 
+rule;<i> tag instead of <italic> to perform text in italic...
+2.Some common tags are familiar to me :like ul,li,img,a,p,div,head,body,meta...
+3.Some are really strange to me :like strike,i,hr,sup.Almost the first time to see them.
+4.I will look up those tags I've never seen before instead of getting frustrated,and little by little,I'm feeling fullfilled somehow~And I 
+think this reflectons are very important for me to record what I've done and learned to help learn more things with confidence~
