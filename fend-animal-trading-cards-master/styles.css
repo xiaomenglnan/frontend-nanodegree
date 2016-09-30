@@ -1,0 +1,31 @@
+/* add your CSS here */
+
+.interesting-facts {
+    font-style: italic;
+}
+
+.labels {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.bordered {
+    border: 3px dashed LightCoral;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #ccc;
+    margin: 20px 10px;
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+}
+
+.container {
+    width: 380px;
+    background-color: MistyRose;
+}
