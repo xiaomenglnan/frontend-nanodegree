@@ -1,0 +1,42 @@
+body * {
+    font-family: 'Indie Flower', cursive;
+}
+
+.header-logo {
+    height: 62px;
+    width: 62px;
+}
+
+.header-headings {
+    text-align: right;
+}
+
+img {
+    width: 100%;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.indent-headings {
+    margin-left: 13px;
+}
+
+hr {
+    border-top: 3px solid #2d3c49 !important;
+}
+
+.main {
+    color: coral;
+}
+
+.image-sources {
+    font-size: 4px;
+    word-break: break-all;
+    width: 100px;
+}
+
+.hidden-line {
+    display: none;
+}
