@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Canvas-paths</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <canvas id="paths" width="640px" height="480px"></canvas>
+    <script>
+    var canvas = document.getElementById("paths");
+    var ctx = canvas.getContext("2d");
+
+
+    base_image = new Image();
+    base_image.crossOrigin = "Anonymous";
+    base_image.onload = function() {
+        ctx.drawImage(base_image, 0, 0);
+        imageToGray();
+    }
+
+    base_image.src = "images/placeimg_640_480_nature.jpg";
+
+    function pixelToGray(r, g, b, a) {
+        var average = (r * 0.299) + (g * 0.587) + (b * 0.114);
+        return {
+            r: average,
+            g: average,
+            g: average,
+            b: average
+        };
+    }
+
+    function imageToGray() {
+        var imageData = ctx.getImageData(0, 0, 640, 480);
+        var numpixels = imageData.data.length / 4;
+        var r, g, b, a;
+        for (var i = 0; i < numpixels; i++) {
+            r = imageData.data[0 + i * 4];
+            g = imageData.data[1 + i * 4];
+            b = imageData.data[2 + i * 4];
+            a = imageData.data[3 + i * 4];
+            pixelArray = pixelToGray(r, g, b, a);
+            imageData.data[0 + i * 4] = pixelArray.r;
+            imageData.data[1 + i * 4] = pixelArray.g;
+            imageData.data[2 + i * 4] = pixelArray.b;
+            imageData.data[3 + i * 4] = pixelArray.a;
+        }
+        ctx.putImageData(imageData, 0, 0);
+    }
+    </script>
+</body>
+
+</html>

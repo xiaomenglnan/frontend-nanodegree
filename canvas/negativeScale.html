@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Canvas-paths</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <canvas id="paths" width="640px" height="480px"></canvas>
+    <script>
+    var canvas = document.getElementById("paths");
+    var ctx = canvas.getContext("2d");
+
+
+    base_image = new Image();
+    base_image.onload = function() {
+        ctx.drawImage(base_image, 0, 0);
+        negativeScale();
+    }
+
+    base_image.src = "images/placeimg_640_480_nature.jpg";
+
+    function negativeScale() {
+        var imageData = ctx.getImageData(0, 0, 640, 480);
+        var numpixels = imageData.data.length / 4;
+        for (var i = 0; i < numpixels; i++) {
+
+            imageData.data[0 + i * 4] = 255 - imageData.data[0 + i * 4];
+            imageData.data[1 + i * 4] = 255 - imageData.data[1 + i * 4];
+            imageData.data[2 + i * 4] = 255 - imageData.data[2 + i * 4];
+            imageData.data[3 + i * 4] = 255 - imageData.data[3 + i * 4];
+        }
+        ctx.putImageData(imageData, 0, 0);
+    }
+    </script>
+</body>
+
+</html>
